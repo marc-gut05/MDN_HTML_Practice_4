@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta property="og.image" content="MDN_HTML_Practice_4/Open%20Graph%20Data%20Image.jpg">
+    <title>My test page</title>
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+      <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <h1>Advanced Text Formatting</h1>
+      <h2>Abbreviations</h2>
+        <p>Abbreviations take an acronym or abbreviation within the text and shows the full version when the word comes into contact with the mouse pointer. The element is written within the &lt;p&gt; element, encasing the intended acronym.<br><br>
+        Below is an example of how the code will be represented in the browser:</p>
+        
+        <h3>Example</h3>
+        
+        <p>The <abbr title="American Association of Retired Persons">AARP</abbr> is an organization dedicated to focusing on issues affecting the elderly.</p>
+      
+        <p>The use of the abbreviation <abbr title="Talt to you later">TTYL</abbr> has fallen in and out of popularity and is usually not an active saying with most people, but was shown in popular media as a sterotype.</p>
+        
+        <p>Here is how the code looks like in the code editor:</p>
+        <img src="Pictures/Abbreviation%20Example.PNG" width="800">
+      
+        <h2>Contact Information</h2>
+        <p>Contact information is important to display because it gives proper credit to the creator of the website, company or whomever may be associated with the browser page. Contact information can be formatted regularly without the use of a special element, but the &lt;address&gt; makes it easier by allowing for the text within it to be inately italicized.<br><br> Below is an example of how the element is represented in the browser.</p>
+        
+        <address>
+            <p>
+               Marcos Gutierrez<br>
+               El Paso<br>
+               Texas<br>
+               USA<br>
+            </p>
+        </address>
+      
+
+       <p>Here is how the address element is used in the text editor:<br>
+       Note how the &lt;br&gt; (break) element is used to lightly format the text.</p>
+      
+      <img src="Pictures/Contact%20Information%20Example.PNG" width="250"><br><br>
+      <code>&lt;img src="Pictures/Contact%20Information%20Example.PNG" width="250"&gt;</code>
+      
+      <h2>Superscript and Subscript</h2>
+      <p>Superscript and subscript text is an important part of any math or science based information that is displayed on a browser. This is acheived by using the &lt;sup&gt; and &lt;sub&gt; elements within a &lt;p&gt; element. Below is an example of how the elements will represent themselves in the browser.</p>
+      
+      <p>My birthday is on the 13<sup>th</sup> of May.<br><br> Here is how the code is written within the text editor:</p>
+      <img src="Pictures/superscript%20practice.PNG" width="500">
+      
+      <h2>Representing Computer Code</h2>
+      <p>As I have been writing this page, I have used screenshots of text within my editor to display them, but there is another way to display code with less steps. This way involves using several elements such as &lt;code&gt; and &lt;pre&gt; to wrap code that we want presented in the browser.<br><br> When we wrap our code with the &lt;code&gt; element, it displays the text without any formatting that may exist in the text editor. This means that the code will be displayed all on the same line, with the base readable space between each character. If any formatting is wanted, the code wrapped with the &lt;code&gt; element must be also wrapped in the &lt;pre&gt; element. Adding the &lt;pre&gt; element allows the text editor to differentiate between indetations, regular spaces, and enter spaces.<br><br>Below is an example of using only the &lt;code&gt; element followed by the same text using both the &lt;pre&gt; and &lt;code&gt;elements. Notice how the font and point size change with these added elements.</p>
+
+<code>var para = document.querySelector('p');
+para.onclick = function() {
+alert('Owww, stop poking me!');
+      }</code>
+      
+      <br><br>
+      
+<pre><code>var para = document.querySelector('p');
+para.onclick = function() {
+alert('Owww, stop poking me!');
+      }</code></pre>
+      
+     <p>While this is useful to use when there is a want for plain-text in the editor, I prefer screenshots because they allow for the unique color-coordination that text editors apply, which is why I will include the following screenshot.</p>
+      
+    <img src="Pictures/Representing%20Computer%20code%20practice.PNG" width="400">
+      
+    <p>Representing computer code is done by many more elements than just the code a pre elements. Here is a helpful screenshot from the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting" target="_blank">Mozilla Development Network website</a>.</p>
+    <img src="Pictures/Computer%20Code%20Cont%20practice.PNG" width="500px">
+      
+    <h2>Marking up Times and Dates</h2>
+      
+      <p>Having an ability to mark dates in the browser creates more opportunity for the utilization of these dates within css or javascript. However, it is not as simple as writing today's date or the current time and wrapping it with the <code>&lt;time&gt;</code> element and being finished. Due to the variety of formats and languages that people write dates and times, the element <code>datetime</code> must also be utilized within the <code>&lt;time&gt; element.</code><br><br> The <code>datetime</code> element works by numerically specifying the date in the order of <code>Year-Month-DayTHour:Minute:Seconds.Miliseconds+offset of Hour:Minute.</code><br><br> The code would be written as such:</p>
+    
+      <code>&lt;time datetime="2020-06-28T17:00:00+00:00"&gt; It is currently 5:00 PM on Sunday, June 28<sup>th</sup>, 2020.&lt;/time&gt;</code>
+      
+      <p>Here is the same code in practice:</p>
+      
+      <time datetime="2020-06-28T17:00:00+00:00"> It is currently 5:00 PM on Sunday, June 28th, 2020.</time>
+      
+      <p>Here is a longer list of examples provided by the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting" target="_blank">Mozilla Development Network website</a></p>
+    
+      <img src="Pictures/Times%20and%20Dates%20Practice.PNG" width="800px">
+      
+  </body>
+</html>
